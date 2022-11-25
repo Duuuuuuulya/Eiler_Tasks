@@ -1,42 +1,14 @@
-const AnswerBtn = document.getElementById('answer');
 
 
-const one = () =>{
-  let summ = 0 
-  let value = 0
-  while(value < 1000) {
-  if(value % 3 === 0 || value % 5 === 0) {
-    summ = summ + value
+function three() {
+  let number  = 600851475143
+  for (let i = 2; i <= Math.sqrt(number); i++) {
+    if ( number % i === 0) {
+      number = number / i
+    }
   }
-  value++
-}
-  console.log(summ)
-  return summ
+  console.log(number)
 }
 
-const two = () => {
-  // const array = [0, 1];
-  // const summ = 0;
-  // const counter  = array.reduce((previousValue, currentValue) => previousValue + currentValue)
-  // while (counter !== 4000000) {
-  //   array.push(counter)
-  //   if(counter % 2 === 0) {
-  //     summ = summ + counter
-  // }
-  // console.log(summ)
-  // return summ
-  // }
-  let counter = 0
-  let x = 1
-  let y = 1
-  let c = x+y
-  while (c < 4000000){
-  counter += c
-  x = y + c
-  y = c + x
-  c = x + y
-  }
-  console.log(counter)
-}
+three()
 
-AnswerBtn.addEventListener('click', two);
