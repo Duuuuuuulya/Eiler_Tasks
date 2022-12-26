@@ -1,14 +1,13 @@
-
-
-function three() {
-  let number  = 600851475143
-  for (let i = 2; i <= Math.sqrt(number); i++) {
-    if ( number % i === 0) {
-      number = number / i
+function seven() {
+  let massive = [2,3]
+  let start = 3
+  while(true){
+    if (massive.some((item) => !(start % item))){
+      start= start + 2;
+      continue;
     }
+    massive.push(start)
+    if(massive.length==10001) break;
   }
-  console.log(number)
-}
-
-three()
-
+  }
+seven()
